@@ -1,9 +1,8 @@
 import { useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 
-// Dynamically load all local music files
-const localTracks = import.meta.glob('../assets/music/*.{mp3,wav,ogg,m4a}', { eager: true, as: 'url' })
-const trackUrls = Object.values(localTracks)
+const localTracks = import.meta.glob('../assets/music/*.{mp3,wav,ogg,m4a}', { eager: true })
+const trackUrls = Object.values(localTracks).map(module => module.default || module)
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
