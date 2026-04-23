@@ -82,7 +82,7 @@ export default function StaffApplyModal({ isOpen, onClose }) {
             <div className="form-row">
               <div className="form-group">
                 <label>Discord Username / Tag</label>
-                <input required type="text" placeholder="e.g. saku.exe3" value={formData.username} onChange={e => setFormData({...formData, username: e.target.value})} />
+                <input required type="text" placeholder="e.g. tanush_44" value={formData.username} onChange={e => setFormData({...formData, username: e.target.value})} />
               </div>
               <div className="form-group">
                 <label>Age</label>

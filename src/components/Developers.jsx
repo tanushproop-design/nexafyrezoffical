@@ -7,7 +7,7 @@ export default function Developers() {
 
   const hardcoded = [
     {
-      username: 'saku.exe3',
+      username: 'tanush_44',
       name: 'Tanush',
       role: 'Founder & Lead Developer',
       url: null,

@@ -25,7 +25,7 @@ const founders = [
     id: 'obito',
     discordId: '1413339455078662260',
     name: '? OBITO x Espada !',
-    username: '@saku.exe3',
+    username: '@tanush_44',
     role: 'Owner',
     roleClass: 'role-founder',
     rankBadge: '💢',
@@ -37,7 +37,7 @@ const founders = [
     type: 'founder',
     status: 'offline',
     badges: ['NX', 'HypeSquad', 'Server Booster'],
-    instagram: 'https://www.instagram.com/saku.exe3/'
+    instagram: 'https://www.instagram.com/tanush_44/'
   }
 ]
 
