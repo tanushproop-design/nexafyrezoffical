@@ -2,11 +2,35 @@ import { useState, useRef, useEffect } from 'react'
 
 import bgmUrl from '../assets/music/bgm.mp3'
 
-export default function MusicPlayer() {
+export default function MusicPlayer({ ready }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [volume, setVolume] = useState(0.5)
   const [isHovered, setIsHovered] = useState(false)
+  const [showPrompt, setShowPrompt] = useState(false)
   const audioRef = useRef(null)
+
+  useEffect(() => {
+    if (ready) {
+      const hasChosen = sessionStorage.getItem('musicPromptResolved');
+      if (!hasChosen) {
+        setTimeout(() => setShowPrompt(true), 800);
+      }
+    }
+  }, [ready]);
+
+  const handleStartMusic = () => {
+    sessionStorage.setItem('musicPromptResolved', 'true');
+    setShowPrompt(false);
+    if (audioRef.current) {
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(e => console.error(e));
+    }
+  };
+
+  const handleKeepPaused = () => {
+    sessionStorage.setItem('musicPromptResolved', 'true');
+    setShowPrompt(false);
+    setIsPlaying(false);
+  };
 
   // Update native audio volume whenever the state changes
   useEffect(() => {
@@ -35,6 +59,22 @@ export default function MusicPlayer() {
   }
 
   return (
+    <>
+    {showPrompt && (
+      <div className="music-prompt-overlay">
+        <div className="music-prompt-box">
+          <div className="music-prompt-icon">
+            <i className="fas fa-play"></i>
+          </div>
+          <h3>Play Auto-Music?</h3>
+          <p>This website features lo-fi background vibes.</p>
+          <div className="music-prompt-actions">
+            <button className="prompt-btn decline" onClick={handleKeepPaused}>Keep Paused</button>
+            <button className="prompt-btn accept" onClick={handleStartMusic}>Play Music</button>
+          </div>
+        </div>
+      </div>
+    )}
     <div 
       className={`music-player-widget ${isHovered || isPlaying ? 'expanded' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
@@ -83,5 +123,6 @@ export default function MusicPlayer() {
         </div>
       </div>
     </div>
+    </>
   )
 }

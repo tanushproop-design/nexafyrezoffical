@@ -3220,3 +3220,127 @@ input[type=range]::-webkit-slider-thumb:hover {
     flex-direction: column;
   }
 }
+
+/* ============================================
+   MUSIC PROMPT OVERLAY
+   ============================================ */
+.music-prompt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(2, 8, 23, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInPrompt 0.5s ease forwards;
+  padding: 20px;
+}
+
+.music-prompt-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px var(--primary-glow);
+  position: relative;
+  overflow: hidden;
+  animation: popUpPrompt 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.music-prompt-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--violet));
+}
+
+.music-prompt-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(124,58,237,0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--primary-light);
+  border: 1px solid rgba(0,102,255,0.2);
+}
+
+.music-prompt-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.music-prompt-box p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.music-prompt-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.prompt-btn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.prompt-btn.decline {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.prompt-btn.decline:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+}
+
+.prompt-btn.accept {
+  background: linear-gradient(135deg, var(--primary), var(--violet));
+  color: white;
+  box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.prompt-btn.accept:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+@keyframes fadeInPrompt {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUpPrompt {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .music-prompt-actions {
+    flex-direction: column;
+  }
+}

@@ -53,7 +53,7 @@ function App() {
         <Stats />
         <CTA />
         <Footer />
-        <MusicPlayer />
+        <MusicPlayer ready={!loading} />
         <ThemeSwitcher />
         <CookieConsent />
       </div>
