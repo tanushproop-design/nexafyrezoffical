@@ -1,8 +1,7 @@
 import { useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 
-const localTracks = import.meta.glob('../assets/music/*.{mp3,wav,ogg,m4a}', { eager: true })
-const trackUrls = Object.values(localTracks).map(module => module.default || module)
+import bgmUrl from '../assets/music/bgm.mp3'
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -10,8 +9,8 @@ export default function MusicPlayer() {
   const [isHovered, setIsHovered] = useState(false)
   const playerRef = useRef(null)
 
-  // Use the first local track if present, else fallback to YouTube default
-  const url = trackUrls.length > 0 ? trackUrls[0] : 'https://youtu.be/HyHNuVaZJ-k'
+  // Use local explicit import
+  const url = bgmUrl
 
   return (
     <div 
@@ -43,7 +42,7 @@ export default function MusicPlayer() {
         <div className="music-player-controls">
           <div className="music-player-info">
             <span className="music-title">
-              <i className="fas fa-music"></i> {trackUrls.length > 0 ? 'Lofi Study (Chill Hop)' : 'Let Me Down Slowly'}
+              <i className="fas fa-music"></i> Lofi Study (Chill Hop)
             </span>
             {isPlaying && <span className="music-equalizer">
               <span className="eq-bar"></span>
