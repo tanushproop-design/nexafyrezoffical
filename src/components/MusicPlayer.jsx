@@ -44,7 +44,7 @@ export default function MusicPlayer() {
         <div className="music-player-controls">
           <div className="music-player-info">
             <span className="music-title">
-              <i className="fas fa-music"></i> {trackUrls.length > 0 ? 'Local Track Active' : 'Let Me Down Slowly'}
+              <i className="fas fa-music"></i> {trackUrls.length > 0 ? 'Lofi Study (Chill Hop)' : 'Let Me Down Slowly'}
             </span>
             {isPlaying && <span className="music-equalizer">
               <span className="eq-bar"></span>
