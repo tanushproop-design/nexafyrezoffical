@@ -3209,10 +3209,12 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 @media (max-width: 768px) {
   .cookie-consent-overlay {
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    max-width: calc(100% - 2rem);
+    bottom: 24px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    max-width: none;
+    z-index: 999999;
   }
   .cookie-buttons {
     flex-direction: column;

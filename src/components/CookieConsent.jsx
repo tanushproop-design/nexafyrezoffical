@@ -4,23 +4,33 @@ export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
+    const consentData = localStorage.getItem('cookieConsentData');
+    if (consentData) {
+      try {
+        const parsed = JSON.parse(consentData);
+        const now = new Date().getTime();
+        // 24 hours in ms = 24 * 60 * 60 * 1000 = 86400000
+        if (now - parsed.timestamp > 86400000) {
+          setTimeout(() => setIsVisible(true), 1500);
+        }
+      } catch (e) {
+        setTimeout(() => setIsVisible(true), 1500);
+      }
+    } else {
       setTimeout(() => {
         setIsVisible(true);
-      }, 1500); // Small delay before showing
+      }, 1500);
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
+  const saveConsent = (status) => {
+    const data = { status, timestamp: new Date().getTime() };
+    localStorage.setItem('cookieConsentData', JSON.stringify(data));
     setIsVisible(false);
   };
 
-  const handleDecline = () => {
-    localStorage.setItem('cookieConsent', 'declined');
-    setIsVisible(false);
-  };
+  const handleAccept = () => saveConsent('accepted');
+  const handleDecline = () => saveConsent('declined');
 
   if (!isVisible) return null;
 
