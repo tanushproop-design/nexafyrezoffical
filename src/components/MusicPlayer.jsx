@@ -1,5 +1,4 @@
-import { useState, useRef } from 'react'
-import ReactPlayer from 'react-player'
+import { useState, useRef, useEffect } from 'react'
 
 import bgmUrl from '../assets/music/bgm.mp3'
 
@@ -7,10 +6,33 @@ export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [volume, setVolume] = useState(0.5)
   const [isHovered, setIsHovered] = useState(false)
-  const playerRef = useRef(null)
+  const audioRef = useRef(null)
 
-  // Use local explicit import
-  const url = bgmUrl
+  // Update native audio volume whenever the state changes
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            setIsPlaying(true);
+          }).catch(error => {
+            console.error("Autoplay/Playback prevented:", error);
+            setIsPlaying(false);
+          });
+        }
+      }
+    }
+  }
 
   return (
     <div 
@@ -18,22 +40,17 @@ export default function MusicPlayer() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <ReactPlayer
-        ref={playerRef}
-        url={url}
-        playing={isPlaying}
-        loop={true}
-        volume={volume}
-        width="0"
-        height="0"
-        config={{ youtube: { playerVars: { showinfo: 0, autoplay: 1 } } }}
-        style={{ display: 'none' }}
+      <audio 
+        ref={audioRef} 
+        src={bgmUrl} 
+        loop 
+        style={{ display: 'none' }} 
       />
       
       <div className="music-player-inner">
         <button 
           className="music-play-btn" 
-          onClick={() => setIsPlaying(!isPlaying)}
+          onClick={togglePlay}
           aria-label={isPlaying ? 'Pause Music' : 'Play Music'}
         >
           <i className={`fas ${isPlaying ? 'fa-pause' : 'fa-play'}`}></i>
