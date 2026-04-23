@@ -13,6 +13,7 @@ import ParticleCanvas from './components/ParticleCanvas'
 import LoadingScreen from './components/LoadingScreen'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import MusicPlayer from './components/MusicPlayer'
+import CookieConsent from './components/CookieConsent'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -54,6 +55,7 @@ function App() {
         <Footer />
         <MusicPlayer />
         <ThemeSwitcher />
+        <CookieConsent />
       </div>
     </>
   )

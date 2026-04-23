@@ -3103,3 +3103,118 @@ input[type=range]::-webkit-slider-thumb:hover {
     width: 220px; 
   }
 }
+
+/* ============================================
+   COOKIE CONSENT
+   ============================================ */
+.cookie-consent-overlay {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+  max-width: 400px;
+  animation: slideUpCookie 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.cookie-consent-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(20px) saturate(180%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cookie-consent-modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--violet));
+}
+
+.cookie-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cookie-consent-modal h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.cookie-consent-modal p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cookie-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.cookie-btn.accept-btn {
+  background: linear-gradient(135deg, var(--primary), var(--violet));
+  color: white;
+  box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.cookie-btn.accept-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.cookie-btn.decline-btn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.cookie-btn.decline-btn:hover {
+  border-color: var(--primary-light);
+  background: rgba(0, 102, 255, 0.05);
+}
+
+@keyframes slideUpCookie {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cookie-consent-overlay {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+  .cookie-buttons {
+    flex-direction: column;
+  }
+}
