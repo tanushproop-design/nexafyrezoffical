@@ -16,7 +16,7 @@ export default function StaffApplyModal({ isOpen, onClose }) {
     e.preventDefault();
     setStatus('loading');
 
-    const webhookUrl = "https://discord.com/api/webhooks/1488994900354662531/t7OUCqOkMNnfl24gZAm7cd26Sb7cTiPptp9kc_q6M8-i-ABpoEjR0MSaJoUbTUvxD3rp";
+    const webhookUrl = "https://discord.com/api/webhooks/1496832917715025961/nGCUWmkxbAhpwyfIq-z_C1ikq6QViFvZPtp7leAXgfP16qDI7axnYEHHODJcCuhNcOiD";
 
     const payload = {
       embeds: [{
