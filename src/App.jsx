@@ -1,13 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Features from './components/Features'
-import Team from './components/Team'
-import TopMembers from './components/TopMembers'
-import Developers from './components/Developers'
-import Stats from './components/Stats'
-import CTA from './components/CTA'
+import Home from './pages/Home'
+import Bots from './pages/Bots'
 import Footer from './components/Footer'
 import ParticleCanvas from './components/ParticleCanvas'
 import LoadingScreen from './components/LoadingScreen'
@@ -39,25 +34,23 @@ function App() {
   }, [loading])
 
   return (
-    <>
+    <Router>
       {loading && <LoadingScreen onComplete={handleLoadingComplete} />}
       <div className={`main-content ${loading ? 'hidden' : 'visible'}`}>
         <ParticleCanvas />
         <Navbar scrolled={scrolled} />
-        <Hero />
-        <About />
-        <Features />
-        <Team />
-        <TopMembers />
-        <Developers />
-        <Stats />
-        <CTA />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/bots" element={<Bots />} />
+        </Routes>
+
         <Footer />
         <MusicPlayer ready={!loading} />
         <ThemeSwitcher />
         <CookieConsent />
       </div>
-    </>
+    </Router>
   )
 }
 
