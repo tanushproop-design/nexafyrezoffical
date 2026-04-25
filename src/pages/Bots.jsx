@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './Bots.css';
+import TicketWidget from '../components/TicketWidget';
 
 export default function Bots() {
   useEffect(() => {
@@ -91,6 +92,7 @@ export default function Bots() {
           </div>
         </div>
       </div>
+      <TicketWidget />
     </section>
   )
 }

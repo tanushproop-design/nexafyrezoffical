@@ -40,7 +40,7 @@
 
 .bot-showcase-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(124, 58, 237, 0.3);
+  border-color: rgba(225, 29, 72, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -49,14 +49,14 @@
 }
 
 .bot-showcase-card.reverse:hover {
-  border-color: rgba(0, 212, 255, 0.3);
+  border-color: rgba(255, 0, 127, 0.3);
 }
 
 .bot-glow-effect {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.2) 0%, rgba(0,0,0,0) 70%);
   top: -100px;
   left: -100px;
   border-radius: 50%;
@@ -65,7 +65,7 @@
 }
 
 .bot-glow-effect.secondary {
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(255, 0, 127, 0.2) 0%, rgba(0,0,0,0) 70%);
   right: -100px;
   left: auto;
 }
@@ -84,20 +84,20 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border: 4px solid rgba(124, 58, 237, 0.3);
+  border: 4px solid rgba(225, 29, 72, 0.3);
 }
 
 .music-bot-icon {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+  background: linear-gradient(135deg, rgba(255, 0, 127, 0.1), rgba(225, 29, 72, 0.1));
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  color: #00d4ff;
-  border: 4px solid rgba(0, 212, 255, 0.3);
+  color: #ff007f;
+  border: 4px solid rgba(255, 0, 127, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .secondary-gradient {
-  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -146,11 +146,11 @@
 }
 
 .glass-tag i {
-  color: #7c3aed;
+  color: #e11d48;
 }
 
 .bot-showcase-card.reverse .glass-tag i {
-  color: #00d4ff;
+  color: #ff007f;
 }
 
 .bot-stats {
@@ -187,9 +187,9 @@
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
 }
 
 @media (max-width: 992px) {

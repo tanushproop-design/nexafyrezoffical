@@ -1,0 +1,305 @@
+.ticket-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.ticket-float-btn:hover {
+  transform: translateY(-3px);
+}
+
+.pulse-btn-red {
+  animation: pulse-glow-red 2s infinite;
+}
+
+@keyframes pulse-glow-red {
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+.ticket-widget-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background: rgba(15, 15, 25, 0.95);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  border-radius: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ticket-widget-container.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ticket-header {
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.ticket-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #10b981;
+}
+
+.close-ticket-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.close-ticket-btn:hover {
+  opacity: 1;
+}
+
+.ticket-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-mode {
+  gap: 20px;
+}
+
+.handlers-info {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.handlers-info p {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.handlers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.handler-badge {
+  background: rgba(225, 29, 72, 0.15);
+  color: #ff8fb3;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+.admin-note {
+  font-size: 0.8rem;
+  color: #fca5a5;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 8px;
+}
+
+.ticket-setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.form-group input, .form-group textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  font-family: inherit;
+  resize: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #e11d48;
+}
+
+.start-chat-btn {
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.start-chat-btn:hover {
+  transform: translateY(-2px);
+}
+
+.chat-mode {
+  gap: 15px;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.chat-message.system {
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+}
+
+.msg-bubble {
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.system .msg-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eee;
+  border-bottom-left-radius: 5px;
+}
+
+.user .msg-bubble {
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.msg-time {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.system .msg-time {
+  align-self: flex-start;
+  margin-left: 5px;
+}
+
+.user .msg-time {
+  align-self: flex-end;
+  margin-right: 5px;
+}
+
+.ticket-input-area {
+  display: flex;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
+}
+
+.ticket-input-area input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: white;
+  outline: none;
+}
+
+.ticket-input-area input:focus {
+  border-color: rgba(225, 29, 72, 0.5);
+}
+
+.send-msg-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.send-msg-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.send-msg-btn:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}
