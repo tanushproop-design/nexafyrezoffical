@@ -37,7 +37,7 @@ const founders = [
     type: 'founder',
     status: 'offline',
     badges: ['NX', 'HypeSquad', 'Server Booster'],
-    instagram: 'https://www.instagram.com/tanush_44/'
+    instagram: 'https://www.instagram.com/saku.exe_/'
   }
 ]
 
