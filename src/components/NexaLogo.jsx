@@ -8,13 +8,13 @@ export default function NexaLogo({ size = 40, className = '' }) {
     >
       <defs>
         <linearGradient id="nxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00a8ff" />
-          <stop offset="50%" stopColor="#0066ff" />
-          <stop offset="100%" stopColor="#7c3aed" />
+          <stop offset="0%" stopColor="#fb7185" />
+          <stop offset="50%" stopColor="#e11d48" />
+          <stop offset="100%" stopColor="#f43f5e" />
         </linearGradient>
         <linearGradient id="nxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00d4ff" />
-          <stop offset="100%" stopColor="#0066ff" />
+          <stop offset="0%" stopColor="#ff007f" />
+          <stop offset="100%" stopColor="#e11d48" />
         </linearGradient>
         <filter id="nxGlow">
           <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -27,7 +27,7 @@ export default function NexaLogo({ size = 40, className = '' }) {
       {/* Outer hex */}
       <polygon 
         points="60,8 102,32 102,78 60,102 18,78 18,32" 
-        fill="rgba(0,102,255,0.08)" 
+        fill="rgba(225,29,72,0.08)" 
         stroke="url(#nxGrad1)" 
         strokeWidth="2"
       />

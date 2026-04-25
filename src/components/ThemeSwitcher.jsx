@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 const themes = [
-  { id: 'blue', color: '#0066ff', icon: 'fas fa-droplet' },
+  { id: 'red', color: '#e11d48', icon: 'fas fa-fire' },
   { id: 'purple', color: '#9b51e0', icon: 'fas fa-bolt' },
   { id: 'green', color: '#10b981', icon: 'fas fa-leaf' },
   { id: 'orange', color: '#f97316', icon: 'fas fa-fire' },
@@ -13,7 +13,7 @@ const themes = [
 export default function ThemeSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem('nexafyrez-theme') || 'blue'
+    return localStorage.getItem('nexafyrez-theme') || 'red'
   })
   const menuRef = useRef(null)
 

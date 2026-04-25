@@ -30,7 +30,7 @@ const founders = [
     roleClass: 'role-founder',
     rankBadge: '💢',
     rankLabel: '#2',
-    rankColor: '#00d4ff',
+    rankColor: '#ff007f',
     desc: 'Maintaining order and leading the Espada initiatives.',
     fullDesc: 'Obito manages the Co-Owner duties, handles escalated moderation issues, and supports the Espada gaming division.',
     pfp: '/obito.png',
@@ -291,7 +291,7 @@ export default function Team() {
         </div>
 
         <ScrollReveal>
-          <div className="apply-staff-banner" style={{ textAlign: 'center', marginTop: '80px', padding: '50px 20px', background: 'linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(124, 58, 237, 0.05))', borderRadius: 'var(--radius-xl)', border: '1px solid rgba(0, 102, 255, 0.1)' }}>
+          <div className="apply-staff-banner" style={{ textAlign: 'center', marginTop: '80px', padding: '50px 20px', background: 'linear-gradient(135deg, rgba(225, 29, 72, 0.05), rgba(244, 63, 94, 0.05))', borderRadius: 'var(--radius-xl)', border: '1px solid rgba(225, 29, 72, 0.1)' }}>
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>Want to join the <span className="gradient-text">Nexafyrez</span> Team?</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', maxWidth: '500px', margin: '0 auto 24px', lineHeight: 1.6 }}>We're always looking for talented and passionate individuals to help us build the best community possible. If you think you have what it takes, submit an application!</p>
             <button id="staff-apply" onClick={() => setIsApplyOpen(true)} className="staff-apply-btn">

@@ -13,7 +13,7 @@ export default function Developers() {
       url: null,
       comingSoon: true,
       avatar: 'https://cdn.discordapp.com/embed/avatars/0.png',
-      color: '#0066ff'
+      color: '#e11d48'
     },
     {
       username: 'o_.9011',
@@ -22,7 +22,7 @@ export default function Developers() {
       url: null,
       comingSoon: true,
       avatar: 'https://cdn.discordapp.com/embed/avatars/1.png',
-      color: '#7c3aed'
+      color: '#f43f5e'
     },
     {
       username: 'superior.asm_',
@@ -30,7 +30,7 @@ export default function Developers() {
       role: 'Core Developer',
       url: 'https://superior01.netlify.app/',
       avatar: 'https://cdn.discordapp.com/embed/avatars/2.png',
-      color: '#00d4ff'
+      color: '#ff007f'
     },
     {
       username: 'stromxd_',

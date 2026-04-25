@@ -23,7 +23,7 @@ class Particle {
   draw(ctx) {
     ctx.beginPath()
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-    ctx.fillStyle = `rgba(0, 102, 255, ${this.opacity})`
+    ctx.fillStyle = `rgba(225, 29, 72, ${this.opacity})`
     ctx.fill()
   }
 }
@@ -62,7 +62,7 @@ export default function ParticleCanvas() {
           if (dist < 150) {
             const opacity = (1 - dist / 150) * 0.15
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(0, 102, 255, ${opacity})`
+            ctx.strokeStyle = `rgba(225, 29, 72, ${opacity})`
             ctx.lineWidth = 0.5
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
