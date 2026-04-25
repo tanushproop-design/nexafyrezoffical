@@ -321,6 +321,7 @@ export default function Bots() {
           'nf activity': 'nf-activity',
           'nf acivity': 'nf-activity',
           'nf birthday': 'nf-birthday',
+          'birthday bot': 'nf-birthday',
           'nexus ai': 'nexus-ai',
           'nexa auth': 'nexa-auth',
         };
