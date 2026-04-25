@@ -513,6 +513,23 @@ img {
   box-shadow: 0 6px 30px var(--primary-glow);
 }
 
+.nav-bot-btn {
+  background: color-mix(in srgb, var(--primary) 10%, transparent) !important;
+  border: 1px solid color-mix(in srgb, var(--primary) 50%, transparent) !important;
+  color: #fff !important;
+}
+
+.nav-bot-btn:hover {
+  background: color-mix(in srgb, var(--primary) 20%, transparent) !important;
+  border-color: var(--primary) !important;
+}
+
+.nav-bot-btn-mobile {
+  background: color-mix(in srgb, var(--primary) 20%, transparent) !important;
+  border: 1px solid var(--primary) !important;
+  margin-bottom: 10px;
+}
+
 /* Staff Apply Button — separate from nav-join-btn so it's not hidden on mobile */
 .staff-apply-btn {
   display: inline-flex;
@@ -1548,6 +1565,11 @@ img {
   margin: 0 auto 36px;
   line-height: 1.7;
   position: relative;
+}
+
+.cta-box-bot {
+  background: color-mix(in srgb, var(--primary) 5%, transparent) !important;
+  border-color: color-mix(in srgb, var(--primary) 20%, transparent) !important;
 }
 
 /* ============================================

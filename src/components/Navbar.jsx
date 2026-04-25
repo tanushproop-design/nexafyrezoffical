@@ -34,7 +34,7 @@ export default function Navbar({ scrolled }) {
           </ul>
           
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-            <Link to="/bots" className="nav-join-btn" style={{ background: 'rgba(225, 29, 72, 0.1)', border: '1px solid rgba(225, 29, 72, 0.5)', color: '#fff' }}>
+            <Link to="/bots" className="nav-join-btn nav-bot-btn">
               <i className="fas fa-robot"></i> Create Own Bot
             </Link>
             <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="nav-join-btn">
@@ -56,7 +56,7 @@ export default function Navbar({ scrolled }) {
         {links.map(link => (
           <a key={link.href} href={link.href} onClick={handleNavClick}>{link.label}</a>
         ))}
-        <Link to="/bots" className="btn btn-primary" style={{ background: 'rgba(225, 29, 72, 0.2)', border: '1px solid #e11d48', marginBottom: '10px' }} onClick={handleNavClick}>
+        <Link to="/bots" className="btn btn-primary nav-bot-btn-mobile" onClick={handleNavClick}>
           <i className="fas fa-robot"></i> Create Own Bot
         </Link>
         <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="btn btn-primary" onClick={handleNavClick}>
