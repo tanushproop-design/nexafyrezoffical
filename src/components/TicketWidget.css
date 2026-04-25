@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -14,7 +14,7 @@
   gap: 10px;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 10px 25px var(--primary-glow);
   transition: transform 0.3s ease;
 }
 
@@ -23,13 +23,13 @@
 }
 
 .pulse-btn-red {
-  animation: pulse-glow-red 2s infinite;
+  animation: pulse-glow-theme 2s infinite;
 }
 
-@keyframes pulse-glow-red {
-  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(225, 29, 72, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+@keyframes pulse-glow-theme {
+  0% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70% { box-shadow: 0 0 0 15px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
 
 .ticket-widget-container {
@@ -39,7 +39,7 @@
   width: 350px;
   height: 500px;
   background: rgba(15, 15, 25, 0.95);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
   border-radius: 20px;
   z-index: 1001;
   display: flex;
@@ -60,7 +60,7 @@
 }
 
 .ticket-header {
-  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -138,17 +138,17 @@
 }
 
 .handler-badge {
-  background: rgba(225, 29, 72, 0.15);
-  color: #ff8fb3;
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary-light);
   padding: 3px 8px;
   border-radius: 4px;
   font-size: 0.8rem;
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .admin-note {
   font-size: 0.8rem;
-  color: #fca5a5;
+  color: var(--primary-light);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 8px;
 }
@@ -182,11 +182,11 @@
 
 .form-group input:focus, .form-group textarea:focus {
   outline: none;
-  border-color: #e11d48;
+  border-color: var(--primary);
 }
 
 .start-chat-btn {
-  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   border: none;
   color: white;
   padding: 12px;
@@ -237,7 +237,7 @@
 }
 
 .user .msg-bubble {
-  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   color: white;
   border-bottom-right-radius: 5px;
 }
@@ -277,14 +277,14 @@
 }
 
 .ticket-input-area input:focus {
-  border-color: rgba(225, 29, 72, 0.5);
+  border-color: color-mix(in srgb, var(--primary) 50%, transparent);
 }
 
 .send-msg-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff007f 0%, #e11d48 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
   color: white;
   border: none;
   display: flex;
