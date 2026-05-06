@@ -58,7 +58,7 @@ export default function Team() {
         const data = await res.json()
         setLiveMembers(data)
         // Filter only Nexafyrez bot members
-        const allowedBots = ['nexafyrez', 'nf acivity', 'nf activity', 'nf birthday', 'birthday bot', 'nf music', 'nexus ai', 'nexa auth'];
+        const allowedBots = ['nexafyrez', 'nf acivity', 'nf activity', 'nf birthday', 'birthday bot', 'nf music', 'nexus ai', 'nexa auth', 'nexa', 'n acivity', 'n birthday', 'n music', 'n acivity™#6276', 'nexa™#1164', 'n music™#0978', 'n birthday™#9924'];
         const serverBots = data.filter(m => m.bot === true)
           .filter(b => {
             const name = (b.displayName || b.username || '').toLowerCase();

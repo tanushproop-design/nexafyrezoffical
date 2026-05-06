@@ -25,7 +25,7 @@ export default function Developers() {
       color: '#f43f5e'
     },
     {
-      username: 'superior.asm_',
+      username: '8wv6',
       name: 'Superior',
       role: 'Core Developer',
       url: 'https://superior01.netlify.app/',
