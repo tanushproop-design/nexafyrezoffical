@@ -41,6 +41,62 @@ const founders = [
   }
 ]
 
+const coFounders = [
+  {
+    id: 'superior',
+    discordId: '',
+    name: 'Superior',
+    username: '@8wv6',
+    role: 'Founder',
+    roleClass: 'role-founder',
+    rankBadge: '💫',
+    rankLabel: '#3',
+    rankColor: '#ff007f',
+    desc: 'Core Developer and Founder of Nexafyrez.',
+    fullDesc: 'Superior is a Core Developer and Founder, actively contributing to the server infrastructure.',
+    pfp: 'https://cdn.discordapp.com/embed/avatars/2.png',
+    type: 'founder',
+    status: 'offline',
+    badges: ['Developer', 'Founder'],
+    instagram: 'https://superior01.netlify.app/'
+  },
+  {
+    id: 'strom',
+    discordId: '',
+    name: 'Strom',
+    username: '@stromxd_',
+    role: 'Founder',
+    roleClass: 'role-founder',
+    rankBadge: '⚡',
+    rankLabel: '#4',
+    rankColor: '#00d2ff',
+    desc: 'UX/UI Developer and Founder of Nexafyrez.',
+    fullDesc: 'Strom is responsible for the incredible UX/UI design and is a core founder.',
+    pfp: 'https://cdn.discordapp.com/embed/avatars/3.png',
+    type: 'founder',
+    status: 'offline',
+    badges: ['Developer', 'Founder'],
+    instagram: 'https://darsh-next-portfolio.vercel.app/'
+  },
+  {
+    id: '4zy0',
+    discordId: '',
+    name: '4zy0',
+    username: '@4zy0',
+    role: 'Founder',
+    roleClass: 'role-founder',
+    rankBadge: '🔥',
+    rankLabel: '#5',
+    rankColor: '#ff4b2b',
+    desc: 'Founder and essential part of the Nexafyrez team.',
+    fullDesc: '4zy0 is a Founder, playing a crucial role in managing and expanding the Nexafyrez community.',
+    pfp: 'https://cdn.discordapp.com/embed/avatars/4.png',
+    type: 'founder',
+    status: 'offline',
+    badges: ['Founder']
+  }
+]
+
 const admins = []
 
 
@@ -90,8 +146,8 @@ export default function Team() {
   }, [])
 
   const mergeLiveData = (hardcoded) => {
-    // Match by exact Discord User ID for 100% accuracy
-    const live = liveMembers.find(m => m.id === hardcoded.discordId);
+    // Match by exact Discord User ID or username
+    const live = liveMembers.find(m => m.id === hardcoded.discordId || ('@' + m.username) === hardcoded.username);
 
     if (live) {
       return {
@@ -137,6 +193,68 @@ export default function Team() {
         {/* Founder / Owner — Premium Cards with Logo */}
         <div className="team-row team-row-main">
           {founders.map((member, i) => {
+            const merged = mergeLiveData(member);
+            return (
+              <React.Fragment key={merged.id}>
+                <ScrollReveal delay={i * 200}>
+                  <div 
+                    className={`team-card-premium team-card-${merged.type}`}
+                    onClick={() => openModal(merged)}
+                  >
+                    {/* Animated border */}
+                    <div className="card-border-anim"></div>
+                    <div className="card-inner">
+                      {/* Rank badge */}
+                      <div className="rank-badge" style={{ '--rank-color': merged.rankColor }}>
+                        <span className="rank-emoji">{merged.rankBadge}</span>
+                        <span className="rank-number">{merged.rankLabel}</span>
+                      </div>
+                      {/* Holographic stripe */}
+                      <div className="holo-stripe"></div>
+                      {/* Avatar with decoration */}
+                      <div className="premium-avatar">
+                        <div className="avatar-glow-ring" style={{ '--ring-color': merged.rankColor }}></div>
+                        <div className="avatar-hex-frame">
+                          <img src={merged.liveAvatar || merged.pfp} alt={merged.name} />
+                        </div>
+                        <div className={`status-indicator ${merged.status}`}>
+                          <span className="status-pulse"></span>
+                        </div>
+                      </div>
+                      <h3 className="team-name">{merged.name}</h3>
+                      <div className="team-username">{merged.username}</div>
+                      <span className={`team-role-badge ${merged.roleClass}`}>
+                        {merged.role}
+                      </span>
+                      {/* Custom Status */}
+                      {merged.customStatus?.text && (
+                        <p className="owner-custom-status">
+                          {merged.customStatus.emoji && <span className="custom-emoji">{merged.customStatus.emoji}</span>}
+                          {merged.customStatus.text}
+                        </p>
+                      )}
+                      {/* Live Activity */}
+                      {merged.liveActivity && merged.liveActivity.type !== 4 ? (
+                        <p className="team-desc" style={{ color: 'var(--primary-light)', fontWeight: 'bold' }}>
+                          {merged.liveActivity.type === 0 ? '🎮 Playing ' : merged.liveActivity.type === 2 ? '🎵 Listening to ' : merged.liveActivity.type === 3 ? '📺 Watching ' : ''}
+                          {merged.liveActivity.name}
+                        </p>
+                      ) : !merged.customStatus?.text ? (
+                        <p className="team-desc">{merged.desc}</p>
+                      ) : null}
+                      <div className="card-click-hint">
+                        <i className="fas fa-expand"></i> Tap to view profile
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </React.Fragment>
+            )})}
+        </div>
+
+        {/* Co-Founders Row */}
+        <div className="team-row team-row-main" style={{ marginTop: '30px' }}>
+          {coFounders.map((member, i) => {
             const merged = mergeLiveData(member);
             return (
               <React.Fragment key={merged.id}>
