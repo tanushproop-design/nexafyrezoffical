@@ -58,7 +58,7 @@ const coFounders = [
     type: 'founder',
     status: 'offline',
     badges: ['Developer', 'Founder'],
-    instagram: 'https://superior01.netlify.app/'
+    instagram: 'https://www.instagram.com/by_superior_/'
   },
   {
     id: 'strom',
@@ -76,7 +76,7 @@ const coFounders = [
     type: 'founder',
     status: 'offline',
     badges: ['Developer', 'Founder'],
-    instagram: 'https://darsh-next-portfolio.vercel.app/'
+    instagram: 'https://www.instagram.com/stromxd_1/'
   },
   {
     id: '4zy0',
@@ -93,7 +93,8 @@ const coFounders = [
     pfp: 'https://cdn.discordapp.com/embed/avatars/4.png',
     type: 'founder',
     status: 'offline',
-    badges: ['Founder']
+    badges: ['Founder'],
+    instagram: 'https://instagram.com/vanitas.cy'
   }
 ]
 
@@ -152,6 +153,7 @@ export default function Team() {
     if (live) {
       return {
         ...hardcoded,
+        name: live.displayName || live.username || hardcoded.name,
         status: live.status,
         liveAvatar: live.avatar,
         avatarDecoration: live.avatarDecoration || null,
