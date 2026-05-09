@@ -13,7 +13,7 @@ const themes = [
 export default function ThemeSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem('Helix-theme') || 'red'
+    return localStorage.getItem('Helix-theme') || 'lightblue'
   })
   const menuRef = useRef(null)
 
