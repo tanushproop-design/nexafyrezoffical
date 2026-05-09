@@ -22,7 +22,7 @@ export default function Hero() {
           Join the most elite community on Discord.
         </p>
         <div className="hero-buttons">
-          <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="btn btn-primary">
+          <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer" className="btn btn-primary">
             <i className="fab fa-discord"></i> Join Our Server
             <span className="btn-glow"></span>
           </a>

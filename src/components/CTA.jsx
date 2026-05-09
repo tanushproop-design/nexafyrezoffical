@@ -12,7 +12,7 @@ export default function CTA() {
             <p className="cta-desc">
               Don't miss out on the action. Join Helix today and become part of the most fire community on Discord!
             </p>
-            <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="btn btn-primary btn-large">
+            <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer" className="btn btn-primary btn-large">
               <i className="fab fa-discord"></i> Join Helix Now
               <span className="btn-glow"></span>
             </a>

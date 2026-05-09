@@ -37,7 +37,7 @@ export default function Navbar({ scrolled }) {
             <Link to="/bots" className="nav-join-btn nav-bot-btn">
               <i className="fas fa-robot"></i> Create Own Bot
             </Link>
-            <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="nav-join-btn">
+            <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer" className="nav-join-btn">
               <i className="fab fa-discord"></i> Join Server
             </a>
           </div>
@@ -59,7 +59,7 @@ export default function Navbar({ scrolled }) {
         <Link to="/bots" className="btn btn-primary nav-bot-btn-mobile" onClick={handleNavClick}>
           <i className="fas fa-robot"></i> Create Own Bot
         </Link>
-        <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="btn btn-primary" onClick={handleNavClick}>
+        <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer" className="btn btn-primary" onClick={handleNavClick}>
           <i className="fab fa-discord"></i> Join Server
         </a>
       </div>

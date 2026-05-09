@@ -12,7 +12,7 @@ export default function Footer() {
               The Ultimate Gaming & Community Hub on Discord. Built with passion, powered by the community.
             </p>
             <div className="footer-socials">
-              <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer" className="footer-social">
+              <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer" className="footer-social">
                 <i className="fab fa-discord"></i>
               </a>
               <a href="https://www.instagram.com/nexa.official_1011/" target="_blank" rel="noreferrer" className="footer-social"><i className="fab fa-instagram"></i></a>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
           <div className="footer-links">
             <h4>Community</h4>
-            <a href="https://discord.gg/JUraGygA" target="_blank" rel="noreferrer">Join Discord</a>
+            <a href="https://discord.gg/uBZQDKuVxa" target="_blank" rel="noreferrer">Join Discord</a>
             <a href="#">Rules</a>
             <a href="#">Support</a>
             <a href="#">Partners</a>
