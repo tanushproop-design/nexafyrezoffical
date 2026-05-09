@@ -7,7 +7,7 @@ const themes = [
   { id: 'orange', color: '#f97316', icon: 'fas fa-fire' },
   { id: 'yellow', color: '#eab308', icon: 'fas fa-sun' },
   { id: 'pink', color: '#ec4899', icon: 'fas fa-heart' },
-  { id: 'red', color: '#ef4444', icon: 'fas fa-burn' }
+  { id: 'lightblue', color: '#3b82f6', icon: 'fas fa-tint' }
 ]
 
 export default function ThemeSwitcher() {
