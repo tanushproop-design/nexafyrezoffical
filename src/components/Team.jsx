@@ -76,7 +76,7 @@ const coFounders = [
     type: 'founder',
     status: 'offline',
     badges: ['Founder'],
-    instagram: ''
+    instagram: 'https://www.instagram.com/vanitas.cy'
   },
   {
     id: 'k3keru',
