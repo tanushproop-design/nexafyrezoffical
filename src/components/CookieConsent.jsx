@@ -39,7 +39,7 @@ export default function CookieConsent() {
       <div className="cookie-consent-modal">
         <div className="cookie-icon">🍪</div>
         <h3>We Value Your Privacy</h3>
-        <p>Nexafyrez uses cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+        <p>Helix uses cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
         <div className="cookie-buttons">
           <button className="cookie-btn decline-btn" onClick={handleDecline}>Decline</button>
           <button className="cookie-btn accept-btn" onClick={handleAccept}>Accept All</button>

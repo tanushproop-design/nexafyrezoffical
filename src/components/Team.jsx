@@ -4,40 +4,40 @@ import StaffApplyModal from './StaffApplyModal'
 
 const founders = [
   {
-    id: 'velvet',
-    discordId: '1451194590072803482',
-    name: 'VELVET',
-    username: '@o_.9011',
+    id: 'strom',
+    discordId: '',
+    name: 'Strom',
+    username: '@stromxd_',
     role: 'Owner',
     roleClass: 'role-founder',
     rankBadge: '👑',
     rankLabel: '#1',
     rankColor: '#ff2a2a',
-    desc: 'Driving the vision and creative direction of Nexafyrez.',
-    fullDesc: 'Velvet is a cornerstone of the community, managing the top-level staff and ensuring the server stays active and engaging.',
-    pfp: '/velvet.png',
+    desc: 'Driving the vision and creative direction of Helix.',
+    fullDesc: 'Strom is a cornerstone of the community, managing the top-level staff and ensuring the server stays active and engaging.',
+    pfp: '/darsh.png',
     type: 'founder',
     status: 'offline',
     badges: ['Server Booster', 'HypeSquad'],
-    instagram: 'https://www.instagram.com/_____velvet.86/?hl=en'
+    instagram: 'https://www.instagram.com/stromxd_1/'
   },
   {
-    id: 'obito',
-    discordId: '1413339455078662260',
-    name: '? OBITO x Espada !',
-    username: '@tanush_44',
+    id: 'dexx',
+    discordId: '',
+    name: '𝘿𝙚𝙭𝙭.exe',
+    username: '@9p7t',
     role: 'Owner',
     roleClass: 'role-founder',
     rankBadge: '💢',
     rankLabel: '#2',
     rankColor: '#ff007f',
-    desc: 'Maintaining order and leading the Espada initiatives.',
-    fullDesc: 'Obito manages the Co-Owner duties, handles escalated moderation issues, and supports the Espada gaming division.',
-    pfp: '/obito.png',
+    desc: 'Maintaining order and leading the initiatives.',
+    fullDesc: 'Dexx manages the Co-Owner duties, handles escalated moderation issues, and supports the community.',
+    pfp: 'https://cdn.discordapp.com/embed/avatars/0.png',
     type: 'founder',
     status: 'offline',
     badges: ['NX', 'HypeSquad', 'Server Booster'],
-    instagram: 'https://www.instagram.com/saku.exe_/'
+    instagram: ''
   }
 ]
 
@@ -52,49 +52,49 @@ const coFounders = [
     rankBadge: '💫',
     rankLabel: '#3',
     rankColor: '#ff007f',
-    desc: 'Core Developer and Founder of Nexafyrez.',
+    desc: 'Core Developer and Founder of Helix.',
     fullDesc: 'Superior is a Core Developer and Founder, actively contributing to the server infrastructure.',
-    pfp: 'https://cdn.discordapp.com/embed/avatars/2.png',
+    pfp: '/superior.png',
     type: 'founder',
     status: 'offline',
     badges: ['Developer', 'Founder'],
     instagram: 'https://www.instagram.com/by_superior_/'
   },
   {
-    id: 'strom',
+    id: 'dark',
     discordId: '',
-    name: 'Strom',
-    username: '@stromxd_',
+    name: 'Dark',
+    username: '@dark',
     role: 'Founder',
     roleClass: 'role-founder',
     rankBadge: '⚡',
     rankLabel: '#4',
     rankColor: '#00d2ff',
-    desc: 'UX/UI Developer and Founder of Nexafyrez.',
-    fullDesc: 'Strom is responsible for the incredible UX/UI design and is a core founder.',
-    pfp: 'https://cdn.discordapp.com/embed/avatars/3.png',
+    desc: 'Founder of Helix.',
+    fullDesc: 'Dark is a core founder.',
+    pfp: '/dark.png',
     type: 'founder',
     status: 'offline',
-    badges: ['Developer', 'Founder'],
-    instagram: 'https://www.instagram.com/stromxd_1/'
+    badges: ['Founder'],
+    instagram: ''
   },
   {
-    id: '4zy0',
+    id: 'k3keru',
     discordId: '',
-    name: '4zy0',
-    username: '@4zy0',
+    name: 'k3keru.hexx',
+    username: '@k3keru.hexx',
     role: 'Founder',
     roleClass: 'role-founder',
     rankBadge: '🔥',
     rankLabel: '#5',
     rankColor: '#ff4b2b',
-    desc: 'Founder and essential part of the Nexafyrez team.',
-    fullDesc: '4zy0 is a Founder, playing a crucial role in managing and expanding the Nexafyrez community.',
-    pfp: 'https://cdn.discordapp.com/embed/avatars/4.png',
+    desc: 'Founder and essential part of the Helix team.',
+    fullDesc: 'k3keru.hexx is a Founder, playing a crucial role in managing and expanding the Helix community.',
+    pfp: 'https://cdn.discordapp.com/embed/avatars/5.png',
     type: 'founder',
     status: 'offline',
     badges: ['Founder'],
-    instagram: 'https://instagram.com/vanitas.cy'
+    instagram: ''
   }
 ]
 
@@ -114,8 +114,8 @@ export default function Team() {
         const res = await fetch(`${apiUrl}/api/members`)
         const data = await res.json()
         setLiveMembers(data)
-        // Filter only Nexafyrez bot members
-        const allowedBots = ['nexafyrez', 'nf acivity', 'nf activity', 'nf birthday', 'birthday bot', 'nf music', 'nexus ai', 'nexa auth', 'nexa', 'n acivity', 'n birthday', 'n music', 'n acivity™#6276', 'nexa™#1164', 'n music™#0978', 'n birthday™#9924'];
+        // Filter only Helix bot members
+        const allowedBots = ['Helix', 'nf acivity', 'nf activity', 'nf birthday', 'birthday bot', 'nf music', 'nexus ai', 'nexa auth', 'nexa', 'n acivity', 'n birthday', 'n music', 'n acivity™#6276', 'nexa™#1164', 'n music™#0978', 'n birthday™#9924'];
         const serverBots = data.filter(m => m.bot === true)
           .filter(b => {
             const name = (b.displayName || b.username || '').toLowerCase();
@@ -130,7 +130,7 @@ export default function Team() {
             role: b.activities?.length > 0 ? b.activities[0].name : 'Bot',
             rankLabel: 'APP',
             desc: b.activities?.length > 0 ? (b.activities[0].state || b.activities[0].details || b.activities[0].name) : 'Online and ready',
-            fullDesc: `${b.displayName || b.username} is a custom Nexafyrez bot serving the community.`,
+            fullDesc: `${b.displayName || b.username} is a custom Helix bot serving the community.`,
             badges: ['Bot', 'Verified'],
             liveActivity: b.activities?.length > 0 ? b.activities[0] : null,
             liveAvatar: b.avatar,
@@ -188,7 +188,7 @@ export default function Team() {
           <div className="section-header">
             <span className="section-tag"><i className="fas fa-users"></i> Our Team</span>
             <h2 className="section-title">Meet The <span className="gradient-text">Legends</span></h2>
-            <p className="section-desc">The elite team behind Nexafyrez who keep this community running strong. Click on any card to view their full profile.</p>
+            <p className="section-desc">The elite team behind Helix who keep this community running strong. Click on any card to view their full profile.</p>
           </div>
         </ScrollReveal>
 
@@ -351,11 +351,11 @@ export default function Team() {
             </div>
           </>
         )}
-        {/* Nexafyrez Team Works (Bots section) */}
+        {/* Helix Team Works (Bots section) */}
         <ScrollReveal>
           <div className="section-header" style={{ marginTop: '60px' }}>
             <span className="section-tag"><i className="fas fa-robot"></i> Custom Integrations</span>
-            <h2 className="section-title">Nexafyrez <span className="gradient-text">Team Works</span></h2>
+            <h2 className="section-title">Helix <span className="gradient-text">Team Works</span></h2>
             <p className="section-desc">
               Experience our custom suite of verified Discord bots built in-house to protect, entertain, and manage the community.
             </p>
@@ -412,7 +412,7 @@ export default function Team() {
 
         <ScrollReveal>
           <div className="apply-staff-banner" style={{ textAlign: 'center', marginTop: '80px', padding: '50px 20px', background: 'linear-gradient(135deg, rgba(225, 29, 72, 0.05), rgba(244, 63, 94, 0.05))', borderRadius: 'var(--radius-xl)', border: '1px solid rgba(225, 29, 72, 0.1)' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>Want to join the <span className="gradient-text">Nexafyrez</span> Team?</h3>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>Want to join the <span className="gradient-text">Helix</span> Team?</h3>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', maxWidth: '500px', margin: '0 auto 24px', lineHeight: 1.6 }}>We're always looking for talented and passionate individuals to help us build the best community possible. If you think you have what it takes, submit an application!</p>
             <button id="staff-apply" onClick={() => setIsApplyOpen(true)} className="staff-apply-btn">
               <i className="fas fa-clipboard-list"></i> Apply For Staff

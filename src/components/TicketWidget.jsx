@@ -72,7 +72,7 @@ export default function TicketWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: "NexafyreZ Website Tickets",
+          username: "Helix Website Tickets",
           avatar_url: "https://cdn.discordapp.com/embed/avatars/0.png",
           content: content
         })
@@ -98,7 +98,7 @@ export default function TicketWidget() {
       <div className={`ticket-widget-container ${isOpen ? 'open' : ''}`}>
         <div className="ticket-header">
           <div className="ticket-header-info">
-            <h3><i className="fas fa-headset"></i> NexafyreZ Support</h3>
+            <h3><i className="fas fa-headset"></i> Helix Support</h3>
             <span className="status-dot"></span>
           </div>
           <button className="close-ticket-btn" onClick={() => setIsOpen(false)}>

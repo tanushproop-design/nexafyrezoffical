@@ -43,7 +43,7 @@ export default function LoadingScreen({ onComplete }) {
 
         {/* Logo */}
         <div className={`loading-logo ${phase >= 1 ? 'revealed' : ''}`}>
-          <img src="/nexafyre_logo.png" alt="Nexafyrez Logo" className="logo-svg" style={{ objectFit: 'cover', borderRadius: '50%' }} />
+          <img src="/helix_logo.png" alt="Helix Logo" className="logo-svg" style={{ objectFit: 'cover', borderRadius: '50%' }} />
         </div>
 
         <h2 className={`loading-title ${phase >= 1 ? 'revealed' : ''}`}>
@@ -72,7 +72,7 @@ export default function LoadingScreen({ onComplete }) {
           {progress < 30 ? 'Initializing systems...' : 
            progress < 60 ? 'Loading community data...' : 
            progress < 90 ? 'Preparing the experience...' : 
-           'Welcome to Nexafyrez'}
+           'Welcome to Helix'}
         </p>
       </div>
     </div>

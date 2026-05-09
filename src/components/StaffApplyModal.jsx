@@ -31,7 +31,7 @@ export default function StaffApplyModal({ isOpen, onClose }) {
           { name: "Why join us?", value: formData.reason || "No reason specified", inline: false }
         ],
         footer: {
-          text: "Nexafyrez Automated System"
+          text: "Helix Automated System"
         }
       }]
     };
@@ -68,7 +68,7 @@ export default function StaffApplyModal({ isOpen, onClose }) {
         </button>
         <div className="apply-header">
           <h2>Apply for <span className="gradient-text">Staff</span></h2>
-          <p>Join the elite Nexafyrez moderation and support team.</p>
+          <p>Join the elite Helix moderation and support team.</p>
         </div>
         
         {status === 'success' ? (
@@ -104,7 +104,7 @@ export default function StaffApplyModal({ isOpen, onClose }) {
             </div>
 
             <div className="form-group">
-              <label>Why do you want to join Nexafyrez?</label>
+              <label>Why do you want to join Helix?</label>
               <textarea required rows="2" placeholder="Why should we choose you?" value={formData.reason} onChange={e => setFormData({...formData, reason: e.target.value})}></textarea>
             </div>
 

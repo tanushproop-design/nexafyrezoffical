@@ -30,9 +30,9 @@ export default function About() {
         <ScrollReveal>
           <div className="section-header">
             <span className="section-tag"><i className="fas fa-info-circle"></i> About Us</span>
-            <h2 className="section-title">What is <span className="gradient-text">Nexafyrez</span>?</h2>
+            <h2 className="section-title">What is <span className="gradient-text">Helix</span>?</h2>
             <p className="section-desc">
-              We're not just a Discord server — we're a family. Nexafyrez is the ultimate hangout spot 
+              We're not just a Discord server — we're a family. Helix is the ultimate hangout spot 
               for gamers, creators, and vibers who want to be part of something legendary.
             </p>
           </div>

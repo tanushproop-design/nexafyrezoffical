@@ -47,7 +47,7 @@ export default function Features() {
         <ScrollReveal>
           <div className="section-header">
             <span className="section-tag"><i className="fas fa-rocket"></i> Features</span>
-            <h2 className="section-title">Why Choose <span className="gradient-text">Nexafyrez</span>?</h2>
+            <h2 className="section-title">Why Choose <span className="gradient-text">Helix</span>?</h2>
             <p className="section-desc">We offer the best features to make your Discord experience unforgettable.</p>
           </div>
         </ScrollReveal>

@@ -13,7 +13,7 @@ const themes = [
 export default function ThemeSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem('nexafyrez-theme') || 'red'
+    return localStorage.getItem('Helix-theme') || 'red'
   })
   const menuRef = useRef(null)
 
@@ -23,7 +23,7 @@ export default function ThemeSwitcher() {
 
   const applyTheme = (themeId) => {
     setActiveTheme(themeId)
-    localStorage.setItem('nexafyrez-theme', themeId)
+    localStorage.setItem('Helix-theme', themeId)
   }
 
   useEffect(() => {

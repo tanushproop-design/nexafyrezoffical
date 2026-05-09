@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <span className="logo-icon"><i className="fas fa-fire-flame-curved"></i></span>
-              <span className="logo-text">Nexafyrez</span>
+              <span className="logo-text">Helix</span>
             </div>
             <p className="footer-desc">
               The Ultimate Gaming & Community Hub on Discord. Built with passion, powered by the community.
@@ -16,7 +16,7 @@ export default function Footer() {
                 <i className="fab fa-discord"></i>
               </a>
               <a href="https://www.instagram.com/nexa.official_1011/" target="_blank" rel="noreferrer" className="footer-social"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.youtube.com/@NexafyreZ1011" target="_blank" rel="noreferrer" className="footer-social"><i className="fab fa-youtube"></i></a>
+              <a href="https://www.youtube.com/@Helix1011" target="_blank" rel="noreferrer" className="footer-social"><i className="fab fa-youtube"></i></a>
             </div>
           </div>
           <div className="footer-links">
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 Nexafyrez. All rights reserved. Made with <i className="fas fa-heart"></i> by the Nexafyrez Team</p>
+          <p>&copy; 2026 Helix. All rights reserved. Made with <i className="fas fa-heart"></i> by the Helix Team</p>
         </div>
       </div>
     </footer>

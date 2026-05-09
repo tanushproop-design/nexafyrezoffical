@@ -22,8 +22,8 @@ export default function Navbar({ scrolled }) {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            <img src="/nexafyre_logo.png" alt="Nexafyrez" style={{ width: '42px', height: '42px', objectFit: 'contain' }} className="nexa-logo" />
-            <span className="logo-text">Nexafyrez</span>
+            <img src="/helix_logo.png" alt="Helix" style={{ width: '42px', height: '42px', objectFit: 'contain' }} className="nexa-logo" />
+            <span className="logo-text">Helix</span>
           </Link>
           <ul className="nav-links">
             {links.map(link => (

@@ -45,7 +45,7 @@ export default function LiveMembers() {
           <h2 className="section-title">
             <span className="title-gradient">Live</span> Server Activity
           </h2>
-          <p className="section-subtitle">Real-time status of our members in the Nexafyrez Discord Server.</p>
+          <p className="section-subtitle">Real-time status of our members in the Helix Discord Server.</p>
         </div>
 
         {loading && members.length === 0 ? (

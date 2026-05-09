@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const sourceDir = 'C:/Users/HP/.gemini/antigravity/brain/tempmediaStorage';
-const destDir = 'C:/Users/HP/.gemini/antigravity/scratch/nexafyrez-website/public';
+const destDir = 'C:/Users/HP/.gemini/antigravity/scratch/Helix-website/public';
 
 try {
   const files = fs.readdirSync(sourceDir);

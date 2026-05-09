@@ -94,7 +94,7 @@ export default function Developers() {
             <h2 className="section-title">
               <span className="title-gradient">Meet The</span> Developers
             </h2>
-            <p className="section-subtitle">The brilliant minds behind Nexafyrez. Click to view our portfolios.</p>
+            <p className="section-subtitle">The brilliant minds behind Helix. Click to view our portfolios.</p>
           </div>
         </ScrollReveal>
 

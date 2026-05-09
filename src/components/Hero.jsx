@@ -15,7 +15,7 @@ export default function Hero() {
         </div>
         <h1 className="hero-title">
           <span className="title-line">Welcome to</span>
-          <span className="title-gradient">Nexafyrez</span>
+          <span className="title-gradient">Helix</span>
         </h1>
         <p className="hero-subtitle">
           The Ultimate Gaming & Community Hub — Where legends are made and friendships are forged. 

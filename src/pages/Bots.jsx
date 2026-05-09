@@ -4,11 +4,11 @@ import TicketWidget from '../components/TicketWidget';
 
 const botsData = [
   {
-    id: 'nexafyrez',
-    name: 'NexafyreZ',
+    id: 'Helix',
+    name: 'Helix',
     icon: 'fas fa-shield-alt',
     desc: 'The ultimate multi-purpose bot with 200+ commands. Moderation, leveling, anti-nuke & more.',
-    fullDesc: 'NexafyreZ is the powerhouse behind the community with over 200 commands. It handles auto-moderation, anti-nuke protection, role management, leveling, welcome/goodbye, giveaways, tickets, logging, fun commands, and much more. Built to keep your server safe 24/7.',
+    fullDesc: 'Helix is the powerhouse behind the community with over 200 commands. It handles auto-moderation, anti-nuke protection, role management, leveling, welcome/goodbye, giveaways, tickets, logging, fun commands, and much more. Built to keep your server safe 24/7.',
     inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1130456108137357413&permissions=8&scope=bot%20applications.commands',
     tags: ['Moderation', 'Leveling', 'Anti-Nuke', 'Utility', 'Fun', 'Logging', 'Welcome', 'Giveaway', 'Tickets', 'Automod'],
     totalCommands: 200,
@@ -315,8 +315,8 @@ export default function Bots() {
         
         // Map API bot names to our bot IDs
         const nameToId = {
-          'nexafyrez': 'nexafyrez',
-          'nexafyre': 'nexafyrez',
+          'Helix': 'Helix',
+          'nexafyre': 'Helix',
           'nf music': 'nf-music',
           'nf activity': 'nf-activity',
           'nf acivity': 'nf-activity',
@@ -388,7 +388,7 @@ export default function Bots() {
     <section id="bots" className="bots-page">
       <div className="bots-header">
         <h1 className="hero-title">
-          <span className="gradient-text">NexafyreZ</span> Bots
+          <span className="gradient-text">Helix</span> Bots
         </h1>
         <p className="hero-subtitle">Our complete suite of Discord bots. Click any card to see full details.</p>
       </div>
