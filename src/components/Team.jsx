@@ -156,6 +156,7 @@ export default function Team() {
         name: live.displayName || live.username || hardcoded.name,
         status: live.status,
         liveAvatar: live.avatar,
+        liveBanner: live.banner || null,
         avatarDecoration: live.avatarDecoration || null,
         customStatus: live.customStatus || null,
         liveActivity: live.activities?.length > 0 ? live.activities[0] : null
@@ -436,9 +437,11 @@ export default function Team() {
               
               <div className="modal-header">
                 <div className="modal-banner" style={{
-                  background: activeMember.rankColor ? 
-                    `linear-gradient(135deg, ${activeMember.rankColor}40, var(--bg-card))` : 
-                    `linear-gradient(135deg, var(--primary-glow), var(--bg-card))`
+                  background: activeMember.liveBanner ? 
+                    `url(${activeMember.liveBanner}) center/cover no-repeat` :
+                    (activeMember.rankColor ? 
+                      `linear-gradient(135deg, ${activeMember.rankColor}40, var(--bg-card))` : 
+                      `linear-gradient(135deg, var(--primary-glow), var(--bg-card))`)
                 }}></div>
                 <div className="modal-avatar-container">
                   <div className="modal-avatar">
