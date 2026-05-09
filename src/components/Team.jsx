@@ -115,7 +115,7 @@ export default function Team() {
         const data = await res.json()
         setLiveMembers(data)
         // Filter only Helix bot members
-        const allowedBots = ['Helix', 'nf acivity', 'nf activity', 'nf birthday', 'birthday bot', 'nf music', 'nexus ai', 'nexa auth', 'nexa', 'n acivity', 'n birthday', 'n music', 'n acivity™#6276', 'nexa™#1164', 'n music™#0978', 'n birthday™#9924'];
+        const allowedBots = ['helix', 'h music', 'h activity', 'h acivity', 'top dawg'];
         const serverBots = data.filter(m => m.bot === true)
           .filter(b => {
             const name = (b.displayName || b.username || '').toLowerCase();
@@ -147,8 +147,8 @@ export default function Team() {
   }, [])
 
   const mergeLiveData = (hardcoded) => {
-    // Match by exact Discord User ID or username
-    const live = liveMembers.find(m => m.id === hardcoded.discordId || ('@' + m.username) === hardcoded.username);
+    // Match by exact Discord User ID or username (case-insensitive)
+    const live = liveMembers.find(m => m.id === hardcoded.discordId || ('@' + m.username).toLowerCase() === hardcoded.username.toLowerCase());
 
     if (live) {
       return {

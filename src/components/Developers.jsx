@@ -62,8 +62,8 @@ export default function Developers() {
   }, [])
 
   const displayDevs = hardcoded.map(dev => {
-    // Exact username match required to pull live avatar and status
-    const live = liveDevs.find(m => m.username === dev.username)
+    // Case-insensitive username match to pull live avatar and status
+    const live = liveDevs.find(m => m.username.toLowerCase() === dev.username.toLowerCase())
     if (live) {
       return {
         ...dev,
