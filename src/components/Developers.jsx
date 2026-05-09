@@ -13,16 +13,16 @@ export default function Developers() {
       url: null,
       comingSoon: true,
       avatar: 'https://cdn.discordapp.com/embed/avatars/0.png',
-      color: '#e11d48'
+      color: '#ffffffff'
     },
     {
-      username: 'o_.9011',
-      name: 'Velvet',
-      role: 'Co-Developer & Designer',
+      username: '4zy0',
+      name: 'Dark',
+      role: 'Co-Developer',
       url: null,
       comingSoon: true,
-      avatar: 'https://cdn.discordapp.com/embed/avatars/1.png',
-      color: '#f43f5e'
+      avatar: 'https://cdn.discordapp.com/embed/avatars/4.png',
+      color: '#00d2ff'
     },
     {
       username: '8wv6',
@@ -30,7 +30,7 @@ export default function Developers() {
       role: 'Core Developer',
       url: 'https://superior01.netlify.app/',
       avatar: 'https://cdn.discordapp.com/embed/avatars/2.png',
-      color: '#ff007f'
+      color: '#ffffffff'
     },
     {
       username: 'stromxd_',
@@ -38,7 +38,7 @@ export default function Developers() {
       role: 'UX / UI Developer',
       url: 'https://darsh-next-portfolio.vercel.app/',
       avatar: 'https://cdn.discordapp.com/embed/avatars/3.png',
-      color: '#ff007f'
+      color: '#ffffffff'
     }
   ]
 
