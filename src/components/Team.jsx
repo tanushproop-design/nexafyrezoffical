@@ -437,11 +437,9 @@ export default function Team() {
               
               <div className="modal-header">
                 <div className="modal-banner" style={{
-                  background: activeMember.liveBanner ? 
-                    `url(${activeMember.liveBanner}) center/cover no-repeat` :
-                    (activeMember.rankColor ? 
-                      `linear-gradient(135deg, ${activeMember.rankColor}40, var(--bg-card))` : 
-                      `linear-gradient(135deg, var(--primary-glow), var(--bg-card))`)
+                  background: activeMember.rankColor ? 
+                    `linear-gradient(135deg, ${activeMember.rankColor}40, var(--bg-card))` : 
+                    `linear-gradient(135deg, var(--primary-glow), var(--bg-card))`
                 }}></div>
                 <div className="modal-avatar-container">
                   <div className="modal-avatar">
