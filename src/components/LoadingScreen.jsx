@@ -47,15 +47,11 @@ export default function LoadingScreen({ onComplete }) {
         </div>
 
         <h2 className={`loading-title ${phase >= 1 ? 'revealed' : ''}`}>
-          <span className="char" style={{animationDelay: '0s'}}>N</span>
+          <span className="char" style={{animationDelay: '0s'}}>H</span>
           <span className="char" style={{animationDelay: '0.05s'}}>E</span>
-          <span className="char" style={{animationDelay: '0.1s'}}>X</span>
-          <span className="char" style={{animationDelay: '0.15s'}}>A</span>
-          <span className="char" style={{animationDelay: '0.2s'}}>F</span>
-          <span className="char" style={{animationDelay: '0.25s'}}>Y</span>
-          <span className="char" style={{animationDelay: '0.3s'}}>R</span>
-          <span className="char" style={{animationDelay: '0.35s'}}>E</span>
-          <span className="char" style={{animationDelay: '0.4s'}}>Z</span>
+          <span className="char" style={{animationDelay: '0.1s'}}>L</span>
+          <span className="char" style={{animationDelay: '0.15s'}}>I</span>
+          <span className="char" style={{animationDelay: '0.2s'}}>X</span>
         </h2>
 
         {/* Progress bar */}
